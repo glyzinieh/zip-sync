@@ -1,4 +1,4 @@
-::CONFIG ZipUrl=http://192.168.10.2/games.zip
+::CONFIG ZipUrl=https://sfes26.sigicre.net/games.zip
 ::CONFIG DestName=芝浦祭2026_ゲーム
 
 @echo off
