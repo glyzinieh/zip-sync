@@ -34,7 +34,7 @@ endlocal & exit /b %RC%
 ::PS   Write-Host "Downloading: $ZipUrl"
 ::PS   $curl = Get-Command curl.exe -ErrorAction SilentlyContinue
 ::PS   if (-not $curl) { throw 'curl.exe was not found. Windows 10 or later is required.' }
-::PS   & $curl.Source --location --fail --silent --show-error --progress-bar --retry 3 --retry-delay 1 --connect-timeout 10 --output $tempZip $ZipUrl
+::PS   & $curl.Source --location --fail --progress-bar --retry 3 --retry-delay 1 --connect-timeout 10 --output $tempZip $ZipUrl
 ::PS   if ($LASTEXITCODE -ne 0) { throw "Download failed (curl exit code $LASTEXITCODE)." }
 ::PS   if (-not (Test-Path -LiteralPath $tempZip) -or (Get-Item -LiteralPath $tempZip).Length -eq 0) {
 ::PS     throw 'Download produced an empty file.'
